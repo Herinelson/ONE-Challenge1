@@ -2,6 +2,16 @@ body {
   margin: 0px;
   background-color: #f3f5fc;
   font-family: "Roboto", sans-serif;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
 }
 
 #logo {
@@ -11,17 +21,12 @@ body {
 }
 
 #texto {
-  position: absolute;
-  width: 450px;
-  height: 280px;
-  left: 8%;
-  top: 168px;
-  font-style: normal;
-  font-weight: 400;
+  width: 90%;
+  height: 90%;
   font-size: 32px;
   line-height: 150%;
   border: none;
-  background: transparent;
+  background-color: transparent;
   box-shadow: none;
   resize: none;
   outline: 0;
@@ -30,28 +35,20 @@ body {
 
 #info {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   padding: 0px;
+  margin-left: 16px;
+  margin-bottom: 16px;
   gap: 8px;
-  position: absolute;
   width: 352px;
   height: 18px;
-  left: 8%;
-  top: 700px;
 }
 
 #button {
+  grid-column: 1;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   padding: 0px;
+  margin-right: 32px;
   gap: 24px;
-  position: absolute;
-  width: 680px;
-  height: 67px;
-  left: 8%;
-  top: 750px;
 }
 
 #criptografa {
@@ -97,23 +94,22 @@ body {
 }
 
 #digitetexto {
-  position: absolute;
-  width: 400px;
-  height: 800px;
-  left: 65%;
-  top: 30px;
+  grid-column: 2;
+  width: auto;
+  height: auto;
+  padding: 100px;
   background: #ffffff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
 }
 
 #digitetexto img {
+  margin: auto;
+  display: block;
   max-width: 300px;
   max-height: 300px;
   height: auto;
   width: auto;
-  margin-top: 10%;
-  margin-left: 15%;
 }
 
 #digitetexto h2 {
@@ -127,25 +123,24 @@ body {
 }
 
 #resultado {
+  text-align: center;
+  position: relative;
+  gap: 20px;
+  align-content: center;
+  justify-items: end;
   display: none;
-  position: absolute;
-  width: 400px;
-  height: 800px;
-  left: 65%;
-  top: 30px;
-  background: #ffffff;
-  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  width: 400;
+  height: 650px;
+  background: #fff;
   border-radius: 32px;
 }
 
 #resultado textarea {
   display: inline-block;
-  max-width: 300px;
-  max-height: 470px;
-  height: 300px;
-  width: 470px;
+  height: 70%;
+  width: 70%;
   margin-top: 10%;
-  margin-left: 15%;
+  margin-bottom: 10%;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -158,40 +153,30 @@ body {
 }
 
 #resultado button {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   background: #ffffff;
-  width: 328px;
+  width: 250px;
   height: 67px;
   font-size: 16px;
   color: #0a3871;
   margin-left: 450;
   border: 1px solid #0a3871;
   border-radius: 24px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin-top: 30%;
-  margin-left: 10%;
 }
 
 #resultado button:hover {
   background: #e0dbdb;
 }
 
-.rodape {
-  background-color: #0a3871;
+footer {
+  background: #0a3871;
   color: #fff;
+  width: 100%;
   font-size: 24px;
-  margin-bottom: 0px;
   text-align: center;
-  padding: 30px;
-  position: relative;
-  top: 820px;
-  width: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 0px;
 }
 
 a {
