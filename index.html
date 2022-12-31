@@ -4,6 +4,7 @@
 
 <head>
   <meta chaset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,36 +16,39 @@
 <body>
 
   <header>
-    <img id="logo" src="img/logo.svg">
+    <img id="logo" src="img/logo.svg" alt="Logo Alura">
   </header>
 
   <main>
-    <div>
-      <textarea id="texto" placeholder="Digite seu texto"></textarea>
-    </div>
+    <article>
+      <div>
+        <textarea id="texto" placeholder="Digite seu texto"></textarea>
+      </div>
+    </article>
 
-    <div id="saida">
+    <article id="saida" aria-labelledby="digite-texto">
       <div id="digitetexto">
         <img id="ilustracao" src="img/imagem.svg">
-        <h2>Nenhuma mensagem encontrada</h2>
+        <h2 id="digite-texto">Nenhuma mensagem encontrada</h2>
         <p>Digite um texto que deseja criptografar ou descriptografar
       </div>
       <div id="resultado">
         <textarea id="textosaida"></textarea>
         <button id="copiar" onclick="copia()">Copiar</button>
       </div>
-    </div>
+    </article>
 
-    <div id="info">
-      <img id="exclamacao" src="img/icone.svg">
-      Apenas letras minúsculas e sem acento.
-    </div>
+    <article class="conteudo" aria-labelledby="aviso">
+      <div id="info">
+        <img id="exclamacao" src="img/icone.svg">
+        <p id="aviso">Apenas letras minúsculas e sem acento.</p>
+      </div>
 
-    <div id="button">
-      <button id="criptografa" onclick="criptografa()">Criptografar</button>
-      <button id="descriptografa" onclick="descriptografa()">Descriptografar</button>
-    </div>
-
+      <div id="button">
+        <button id="criptografa" onclick="criptografa()">Criptografar</button>
+        <button id="descriptografa" onclick="descriptografa()">Descriptografar</button>
+      </div>
+    </article>
   </main>
 
   <footer>
